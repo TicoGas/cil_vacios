@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Cilindros</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div id="form-container">
+        <form id="gas-form">
+            <header>
+                <h1 style="color: green;">TICO GAS, C.A.</h1>
+                <h2>REGISTRO DE VACIOS RECOGIDOS</h2>
+            </header>
+
+            <label for="fecha">FECHA:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="cliente">NOMBRE Y APELLIDO DEL CLIENTE:</label>
+            <input type="text" id="cliente" name="cliente" required placeholder="Ej: Ana Pérez">
+
+            <label for="direccion">DIRECCIÓN:</label>
+            <input type="text" id="direccion" name="direccion" required placeholder="Ej: Av. Las Américas, Edif. A">
+
+            <label for="telefono">TELÉFONO:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 0414-1234567">
+
+            <fieldset>
+                <legend>CANTIDAD DE CILINDROS RECOGIDOS</legend>
+                <div class="cylinder-grid">
+                    <label for="cil-10k">Cil. 10K:</label>
+                    <input type="number" id="cil-10k" name="cil-10k" min="0" max="10" value="0">
+
+                    <label for="cil-18k">Cil. 18K:</label>
+                    <input type="number" id="cil-18k" name="cil-18k" min="0" max="10" value="0">
+
+                    <label for="cil-27k">Cil. 27K:</label>
+                    <input type="number" id="cil-27k" name="cil-27k" min="0" max="10" value="0">
+
+                    <label for="cil-43k">Cil. 43K:</label>
+                    <input type="number" id="cil-43k" name="cil-43k" min="0" max="10" value="0">
+                </div>
+            </fieldset>
+
+            <button type="submit">Registrar Pedido</button>
+        </form>
+    </div>
+
+    <div id="summary-overlay" class="hidden">
+        <div id="summary-content">
+            </div>
+        <div id="summary-buttons">
+            <button id="modify-btn">Modificar Pedido</button>
+            <button id="accept-btn">Aceptar y Guardar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
